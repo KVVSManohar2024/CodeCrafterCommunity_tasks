@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('jpjk.jpeg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .header-logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <header class="px-4 py-2 bg-netflix-black flex justify-center items-center relative">
+        <img src="loga.png" alt="logo" class="header-logo">
+        <nav class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-semibold text-red-600">      </h1>
+            <input type="text" id="search" placeholder="Search for movies" class="px-4 py-2 rounded-full bg-gray-800 focus:outline-none focus:ring focus:border-blue-300">
+            <button id="search-btn" class="px-4 py-2 ml-2 bg-red-600 hover:bg-red-700 rounded-full focus:outline-none focus:ring focus:border-blue-300" >Search</button>
+        </nav>
+    </header>
+    
+    <main class="container mx-auto py-8">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6" id="movie-grid">
+            <!-- Movie posters will be displayed here -->
+        </div>
+        
+        <div class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-80 hidden" id="modal">
+            <div class="bg-gray-800 p-4 rounded-lg text-white">
+                <button id="back-btn" class="px-4 py-2 ml-2 bg-red-600 hover:bg-red-700 rounded-full focus:outline-none focus:ring focus:border-blue-300">Back</button>
+                <h2 id="movie-title"></h2>
+                <video id="movie-video" controls>
+                    <source id="video-source" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
