@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('background.webp');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    #articleForm {
+        margin: 20px;
+    }
+    
+    #articleForm input, #articleForm textarea, #articleForm select {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    #articleList {
+        margin: 20px;
+    }
+    
+    .articleItem {
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #fff;
+    }
+    
+    /* Smooth scrolling animation */
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+    
+    <header>
+        <h1>Content Management System</h1>
+        <button id="createArticleBtn">Create New Article</button>
+    </header>
+
+    <div id="articleList">
+        <!-- Display list of articles here -->
+    </div>
+
+    <div id="articleForm" style="display: none;">
+        <input type="text" id="articleTitle" placeholder="Article Title">
+        <textarea id="articleContent" placeholder="Article Content"></textarea>
+        <input type="file" id="imageUpload" accept="image/*">
+        <select id="categorySelect">
+            <option value="technology">Technology</option>
+            <option value="news">News</option>
+            <option value="lifestyle">Lifestyle</option>
+        </select>
+        <button id="saveArticleBtn">Save Article</button>
+    </div>
+
+    <footer>
+        
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
